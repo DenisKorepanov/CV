@@ -18,10 +18,10 @@ def segment_fish(img):
     img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     img_hsv = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2HSV)
 
-    light_orange = np.array((0, 169, 150))
-    dark_orange = np.array((100, 255, 255))
-    light_white = np.array((70, 0, 200))
-    dark_white = np.array((145, 180, 255))
+    light_orange = np.array((100, 90, 150))
+    dark_orange = np.array((50, 90, 255))
+    light_white = np.array((90, 90, 200))
+    dark_white = np.array((190, 210, 255))
 
     orange_mask = cv2.inRange(img_hsv, light_orange, dark_orange)
     white_mask = cv2.inRange(img_hsv, light_white, dark_white)
